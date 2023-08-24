@@ -6,7 +6,21 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
-
+  .lost-password {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  .create-button {
+    background: #808080;
+    color: #ffffff;
+  }
   .container-logo {
     padding-bottom: 1rem;
   }
