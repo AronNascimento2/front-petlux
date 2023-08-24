@@ -16,11 +16,8 @@ export const Chat = ({ className }: props) => {
     setShow(true)
   }
 
-  const handleCloseModal = (e: { target: any }) => {
-    if (!containerRef.current.contains(e.target)) {
-      setShow(false)
-      onClose()
-    }
+  const handleCloseModal = () => {
+    setShow(false)
   }
 
   useEffect(() => {
@@ -32,7 +29,7 @@ export const Chat = ({ className }: props) => {
     return () => {
       document.removeEventListener('mousedown', handleCloseModal)
     }
-  }, [handleCloseModal, show])
+  }, [show])
 
   return (
     <div ref={containerRef}>
