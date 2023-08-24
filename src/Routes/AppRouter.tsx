@@ -5,7 +5,7 @@ const AppRouter = () => {
   return (
     <BrowserRouter basename="/front-petlux">
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/front-petlux" element={<Login />} />
       </Routes>
     </BrowserRouter>
   )
