@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <S.Container>
       <img
-        src={'./src/assets/petluxlogo.png'}
+        src={'/front-petlux/assets/petluxlogo-135d622f.png'}
         alt="logo-petlux"
         className="logo"
       />
