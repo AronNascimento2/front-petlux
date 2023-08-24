@@ -6,7 +6,6 @@ import MenuItem from '@mui/material/MenuItem'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import Divider from '@mui/material/Divider'
 import IconButton from '@mui/material/IconButton'
-import Typography from '@mui/material/Typography'
 import Tooltip from '@mui/material/Tooltip'
 import PetsIcon from '@mui/icons-material/Pets'
 import Settings from '@mui/icons-material/Settings'
@@ -47,7 +46,6 @@ export default function AccountMenu() {
           textAlign: 'center',
           paddingRight: '2rem'
         }}>
-        <Typography sx={{ minWidth: 100 }}>Contato</Typography>
         <TemporaryDrawer />
         <Tooltip title="Conta">
           <IconButton
