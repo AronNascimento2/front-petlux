@@ -53,7 +53,7 @@ export const RecoveryPassword = () => {
       ) : (
         <>
           <div className="container-logo">
-            <img src={'./assets/petluxlogo.png'} alt="" className="logo" />
+            <img src={'src/assets/petluxLogo.png'} alt="" className="logo" />
           </div>
           <div className="container-div">
             <input
