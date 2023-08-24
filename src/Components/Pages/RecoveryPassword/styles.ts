@@ -73,8 +73,7 @@ export const Container = styled.div`
     }
 
     .input {
-      width: 100%;
-      max-width: 400px;
+      width: 240px;
     }
 
     .buttons-recovery {
