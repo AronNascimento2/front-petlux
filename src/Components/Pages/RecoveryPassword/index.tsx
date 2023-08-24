@@ -1,58 +1,59 @@
-import { useNavigate } from "react-router-dom";
-import * as S from "./styles";
-import { useCallback, useRef, useState } from "react";
-import { toast } from "react-toastify";
-import { Users } from "../../../constants/Users";
-import { Loader } from "../../Loader";
+import { useNavigate } from 'react-router-dom'
+import * as S from './styles'
+import { useCallback, useRef, useState } from 'react'
+import { toast } from 'react-toastify'
+import { Users } from '../../../constants/Users'
+import { Loader } from '../../Loader'
 // ...
 
 export const RecoveryPassword = () => {
-  const history = useNavigate();
-  const emailInputRef = useRef<HTMLInputElement>(null);
-  const [loading, setLoading] = useState(false);
+  const history = useNavigate()
+  const emailInputRef = useRef<HTMLInputElement>(null)
+  const [loading, setLoading] = useState(false)
 
   const handleSetText = useCallback(async () => {
-    const emailInputValue = emailInputRef.current?.value;
+    const emailInputValue = emailInputRef.current?.value
 
-    if (emailInputValue && emailInputValue.trim() !== "") {
-      setLoading(true);
+    if (emailInputValue && emailInputValue.trim() !== '') {
+      setLoading(true)
 
-      const user = Users.find((user) => user.email === emailInputValue);
+      const user = Users.find((user) => user.email === emailInputValue)
 
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 2000))
 
-      setLoading(false);
+      setLoading(false)
 
       if (user) {
-        toast.success("Nova senha enviada para seu email!", {
-          position: toast.POSITION.BOTTOM_RIGHT,
-        });
-        history("/"); // Redireciona imediatamente em caso de sucesso
+        toast.success('Nova senha enviada para seu email!', {
+          position: toast.POSITION.BOTTOM_RIGHT
+        })
+        history('/') // Redireciona imediatamente em caso de sucesso
       } else {
         toast.error(
-          "Email não encontrado. Por favor, verifique o email inserido.",
+          'Email não encontrado. Por favor, verifique o email inserido.',
           {
-            position: toast.POSITION.BOTTOM_RIGHT,
+            position: toast.POSITION.BOTTOM_RIGHT
           }
-        );
+        )
         setTimeout(() => {
-          setLoading(false); // Define o loading para false após o erro
-        }, 2000);
+          setLoading(false) // Define o loading para false após o erro
+        }, 2000)
       }
     } else {
-      toast.error("Por favor, insira um email válido.", {
-        position: toast.POSITION.BOTTOM_RIGHT,
-      });
+      toast.error('Por favor, insira um email válido.', {
+        position: toast.POSITION.BOTTOM_RIGHT
+      })
     }
-
-  }, [history]);
+  }, [history])
 
   return (
     <S.Container>
-      {loading ? <Loader /> : (
+      {loading ? (
+        <Loader />
+      ) : (
         <>
           <div className="container-logo">
-            <img src={"src/assets/petlux-logo.png"} alt="" className="logo" />
+            <img src={'src/assets/petluxLogo.png'} alt="" className="logo" />
           </div>
           <div className="container-div">
             <input
@@ -63,7 +64,7 @@ export const RecoveryPassword = () => {
             />
           </div>
           <div className="buttons-recovery">
-            <button onClick={() => history("/")} className="cancel-button">
+            <button onClick={() => history('/')} className="cancel-button">
               Cancelar
             </button>
             <button onClick={handleSetText}>Enviar</button>
@@ -71,5 +72,5 @@ export const RecoveryPassword = () => {
         </>
       )}
     </S.Container>
-  );
-};
+  )
+}
