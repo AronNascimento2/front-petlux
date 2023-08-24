@@ -1,3 +1,7 @@
+ ![](https://github.com/AronNascimento2/front-petlux/blob/master/src/assets/petlux-video.gif)
+ Desculpe a qualidade do video foi a conversão perdeu qualidade
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
