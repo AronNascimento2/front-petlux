@@ -43,7 +43,7 @@ export const Chat = ({ className }: props) => {
               {' '}
               <div className="infochat">
                 <Avatar className="avatar" />
-                <p>Aron Nasciment</p>
+                <p>Aron Nascimento</p>
               </div>
               <div className="icon-close">
                 <CloseIcon onClick={handleCloseModal} />
