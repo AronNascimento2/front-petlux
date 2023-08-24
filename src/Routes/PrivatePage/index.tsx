@@ -11,6 +11,7 @@ export const PrivatePage = ({ children }: Props) => {
     <S.PageContainer>
       <S.PageRightContainer className="pageRightContainer">
         <Header />
+        Aqui
         {children}
       </S.PageRightContainer>
     </S.PageContainer>

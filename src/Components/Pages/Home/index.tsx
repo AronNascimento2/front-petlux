@@ -1,12 +1,11 @@
-import { useNavigate } from "react-router-dom";
-import * as S from "./styles";
+import * as S from './styles'
+import { Header } from '../../Header'
 
 export const Home = () => {
-  const history = useNavigate();
   return (
     <S.Container>
+      <Header />
       <p>Home</p>
-      <button onClick={() => history("/")}>Sair</button>
     </S.Container>
-  );
-};
+  )
+}

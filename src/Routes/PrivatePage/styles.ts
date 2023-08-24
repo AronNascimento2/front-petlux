@@ -10,11 +10,9 @@ export const PageContainer = styled.main`
 `
 
 export const PageRightContainer = styled.div`
-
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    position: relative;
-  
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: relative;
 `
