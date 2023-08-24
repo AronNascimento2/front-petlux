@@ -20,7 +20,7 @@ export const Chat = ({ className }: props) => {
     setShow(false)
   }
 
-  const handleModalClick = (event) => {
+  const handleModalClick = (event: MouseEvent) => {
     // Evitar a propagação do evento para o elemento pai
     event.stopPropagation()
   }
@@ -32,7 +32,7 @@ export const Chat = ({ className }: props) => {
       </S.Container>
       {show && (
         <S.ChatWrapper>
-          <S.ModalChat onClick={() => handleModalClick(show)}>
+          <S.ModalChat onClick={() => handleModalClick}>
             <div className="headerchat">
               {' '}
               <div className="infochat">
