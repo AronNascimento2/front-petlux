@@ -87,60 +87,104 @@ Error generating stack: `+i.message+`
   align-items: center;
   justify-content: center;
   height: 100%;
+
   .lost-password {
     cursor: pointer;
     &:hover {
       text-decoration: underline;
     }
   }
+
   .button-group {
     display: flex;
     gap: 1rem;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 1rem;
   }
+
   .create-button {
     background: #808080;
     color: #ffffff;
   }
+
   .container-logo {
     padding-bottom: 1rem;
   }
+
   .logo {
     width: 320px;
     border-radius: 50%;
   }
+
   .container-div {
     display: flex;
     gap: 1rem;
     flex-direction: column;
+    align-items: center;
     width: auto;
   }
-  .input {
-    width: 300px;
+
+  .input,
+  button {
+    width: 300px; /* Mesmo tamanho para inputs e botões */
     height: 45px;
     border-radius: 30px;
     border: none;
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem;
+    font-weight: 600;
+  }
+
+  .input {
     background: #cccccc;
   }
+
   a {
     font-size: 12px;
     color: white;
     margin: 1rem;
     text-decoration: none;
   }
+
   button {
-    width: 250px;
-    height: 45px;
-    border-radius: 30px;
-    border: none;
-    padding: 0 1rem 0 1rem;
-    font-weight: 600;
     color: #000000;
     background-color: #ffb300;
     cursor: pointer;
+
     &:active {
       background-color: #ffd700;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      width: 200px;
+    }
+
+    .container-div {
+      align-items: center;
+    }
+
+    .input,
+    button {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .button-group {
+      gap: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+
+    button {
+      height: 50px;
+      font-size: 14px;
     }
   }
 `,L1=[{name:"Aron",email:"aron@teste.com",senha:"@Ar12345679"},{name:"Indira",email:"indira@teste.com",senha:"@Id12345679"}];var cE=function(e){return{display:e?"flex":"none"}},Km="#4fa94d",dE={"aria-busy":!0,role:"status"},Gm=globalThis&&globalThis.__assign||function(){return Gm=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++){t=arguments[n];for(var o in t)Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o])}return e},Gm.apply(this,arguments)},Ym=globalThis&&globalThis.__assign||function(){return Ym=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++){t=arguments[n];for(var o in t)Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o])}return e},Ym.apply(this,arguments)},Qm=globalThis&&globalThis.__assign||function(){return Qm=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++){t=arguments[n];for(var o in t)Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o])}return e},Qm.apply(this,arguments)},Xm=globalThis&&globalThis.__assign||function(){return Xm=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++){t=arguments[n];for(var o in t)Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o])}return e},Xm.apply(this,arguments)},qm=globalThis&&globalThis.__assign||function(){return qm=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++){t=arguments[n];for(var o in t)Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o])}return e},qm.apply(this,arguments)},Zm=globalThis&&globalThis.__assign||function(){return Zm=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++){t=arguments[n];for(var o in t)Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o])}return e},Zm.apply(this,arguments)},Jm=globalThis&&globalThis.__assign||function(){return Jm=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++){t=arguments[n];for(var o in t)Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o])}return e},Jm.apply(this,arguments)},D1={exports:{}},$e={};/**
@@ -421,54 +465,85 @@ Error generating stack: `+i.message+`
   align-items: center;
   justify-content: center;
   height: 100%;
+
   .container-logo {
     padding-bottom: 1rem;
   }
+
   .logo {
     width: 320px;
     border-radius: 50%;
   }
+
   .container-div {
     display: flex;
-    gap: 1rem;
     flex-direction: column;
     width: auto;
+    align-items: center;
   }
+
   .input {
     width: 490px;
     height: 45px;
     border-radius: 30px;
     border: none;
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem;
     background: #cccccc;
+    max-width: 100%;
+    box-sizing: border-box;
   }
+
   a {
     font-size: 12px;
     color: white;
     margin: 1rem;
     text-decoration: none;
   }
+
   .buttons-recovery {
     display: flex;
     padding: 1rem;
     gap: 1rem;
+    justify-content: center;
   }
+
   button {
-    width: 250px;
     height: 45px;
     border-radius: 30px;
     border: none;
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem;
     font-weight: 600;
     color: #000000;
     background-color: #ffb300;
     cursor: pointer;
+
     &:active {
       background-color: #ffd700;
     }
   }
+
   .cancel-button {
     background-color: #e4e6eb;
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      width: 200px;
+    }
+
+    .input {
+      width: 240px;
+    }
+
+    .buttons-recovery {
+      gap: 0.5rem;
+    }
+
+    button {
+      width: 100%;
+      max-width: 300px;
+      height: 40px; /* Aumentei a altura do botão */
+    }
   }
 `,y_=()=>{const e=ru(),t=w.useRef(null),[n,r]=w.useState(!1),o=w.useCallback(async()=>{var s;const i=(s=t.current)==null?void 0:s.value;if(i&&i.trim()!==""){r(!0);const a=L1.find(l=>l.email===i);await new Promise(l=>setTimeout(l,2e3)),r(!1),a?(ae.success("Nova senha enviada para seu email!",{position:ae.POSITION.BOTTOM_RIGHT}),e("/")):(ae.error("Email não encontrado. Por favor, verifique o email inserido.",{position:ae.POSITION.BOTTOM_RIGHT}),setTimeout(()=>{r(!1)},2e3))}else ae.error("Por favor, insira um email válido.",{position:ae.POSITION.BOTTOM_RIGHT})},[e]);return $.jsx(v_,{children:n?$.jsx(rx,{}):$.jsxs($.Fragment,{children:[$.jsx("div",{className:"container-logo",children:$.jsx("img",{src:"src/assets/petluxLogo.png",alt:"",className:"logo"})}),$.jsx("div",{className:"container-div",children:$.jsx("input",{type:"text",placeholder:"Digite seu e-mail",className:"input",ref:t})}),$.jsxs("div",{className:"buttons-recovery",children:[$.jsx("button",{onClick:()=>e("/"),className:"cancel-button",children:"Cancelar"}),$.jsx("button",{onClick:o,children:"Enviar"})]})]})})},x_=ni.div`
   display: flex;
@@ -485,35 +560,55 @@ Error generating stack: `+i.message+`
     width: auto;
     padding-bottom: 1rem;
   }
+
   input {
     width: 600px;
     height: 45px;
     border-radius: 30px;
     border: none;
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem;
     background: #cccccc;
     font-size: 18px;
   }
+
   .buttons-create {
     display: flex;
     padding: 1rem;
     gap: 1rem;
   }
+
   button {
     width: 250px;
     height: 45px;
     border-radius: 30px;
     border: none;
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem;
     font-weight: 600;
     color: #000000;
     background-color: #ffb300;
     cursor: pointer;
+
     &:active {
       background-color: #ffd700;
     }
   }
+
   .cancel-button {
     background-color: #e4e6eb;
+  }
+
+  @media (max-width: 768px) {
+    .buttons-create {
+      display: flex;
+      width: 300px;
+    }
+    input {
+      height: 35px;
+      width: 100%; /* Preencher largura total */
+    }
+
+    button {
+      width: 100%; /* Preencher largura total */
+    }
   }
 `,w_=()=>{const[e,t]=w.useState(""),[n,r]=w.useState(""),[o,i]=w.useState(""),[s,a]=w.useState(""),l=ru(),u=w.useCallback(b=>{t(b.target.value)},[]),c=w.useCallback(b=>{r(b.target.value)},[]),d=w.useCallback(b=>{i(b.target.value)},[]),h=w.useCallback(b=>{a(b.target.value)},[]),y=b=>/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(b),v=b=>/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(b),m=w.useCallback(()=>{!e||!n||!v(n)||!y(o)||o!==s?!e||!n?ae.error("Por favor, preencha todos os campos.",{position:ae.POSITION.BOTTOM_RIGHT}):v(n)?y(o)?o!==s&&ae.error("As senhas não coincidem.",{position:ae.POSITION.BOTTOM_RIGHT}):ae.error("A senha deve ter pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula e um caractere especial.",{position:ae.POSITION.BOTTOM_RIGHT}):ae.error("Por favor, insira um email válido.",{position:ae.POSITION.BOTTOM_RIGHT}):(ae.success("Conta criada com sucesso",{position:ae.POSITION.BOTTOM_RIGHT}),l("/"))},[e,n,o,s,l]);return $.jsxs(x_,{children:[$.jsxs("div",{className:"container-inputs",children:[$.jsx("input",{type:"text",placeholder:"Digite seu nome",value:e,onChange:u}),$.jsx("input",{type:"email",placeholder:"Digite seu email",value:n,onChange:c}),$.jsx("input",{type:"password",placeholder:"Digite sua senha",value:o,onChange:d}),$.jsx("input",{type:"password",placeholder:"Confirme sua senha",value:s,onChange:h}),$.jsx("input",{type:"text",placeholder:"Digite seu endereço"}),$.jsx("input",{type:"text",placeholder:"CEP"}),$.jsx("input",{type:"text",placeholder:"Cidade"}),$.jsx("input",{type:"text",placeholder:"Estado"}),$.jsx("input",{type:"text",placeholder:"Número de telefone"}),$.jsx("input",{type:"text",placeholder:"Data de nascimento"})]}),$.jsxs("div",{className:"buttons-create",children:[$.jsx("button",{onClick:()=>l("/"),className:"cancel-button",children:"Voltar"}),$.jsx("button",{onClick:m,children:"Criar"})]})]})};function b_(){return $.jsxs(iC,{theme:xC,children:[$.jsx(uC,{}),$.jsx(j1,{basename:"/front-petlux",children:$.jsxs(M1,{children:[$.jsx(bo,{path:"/",element:$.jsx(ox,{})}),$.jsx(bo,{path:"/home",element:$.jsx(g_,{})}),$.jsx(bo,{path:"/recoverypassword",element:$.jsx(y_,{})}),$.jsx(bo,{path:"/createnewaccount",element:$.jsx(w_,{})})]})})," ",$.jsx(vk,{}),$.jsx(Od,{theme:"colored",autoClose:1e3,limit:1})]})}Lc.createRoot(document.getElementById("root")).render($.jsx(X.StrictMode,{children:$.jsx(b_,{})}));
