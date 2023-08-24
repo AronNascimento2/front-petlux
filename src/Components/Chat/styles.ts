@@ -48,7 +48,7 @@ export const ModalChat = styled.div`
     justify-content: space-between;
     border-radius: 20px 20px 0 0;
     width: 100%;
-    background: gray;
+    background-color: #192a56;
     height: 60px;
 
     .infochat {
