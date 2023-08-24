@@ -1,6 +1,6 @@
 {
   "name": "petlux",
-  "private": true,
+  "private": false,
   "homepage": "https://aronnascimento2.github.io/front-petlux/",
   "version": "0.0.0",
   "type": "module",
