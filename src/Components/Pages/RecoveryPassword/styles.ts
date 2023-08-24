@@ -20,7 +20,7 @@ export const Container = styled.div`
     width: auto;
   }
   .input {
-    width: 300px;
+    width: 490px;
     height: 45px;
     border-radius: 30px;
     border: none;
