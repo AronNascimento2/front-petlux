@@ -1,6 +1,15 @@
  ![](https://github.com/AronNascimento2/front-petlux/blob/master/src/assets/petlux-video.gif)
- Desculpe a qualidade do video foi a conversão perdeu qualidade
+ Desculpe a qualidade do video após a conversão perdeu qualidade
+_________
+🖥️ Tecnologias
 
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- [React](https://reactjs.org)
+- [Vite](https://vitejs.dev/)
+- [Material UI](https://mui.com/)
+
+_________
 
 # React + TypeScript + Vite
 
