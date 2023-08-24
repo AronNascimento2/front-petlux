@@ -527,9 +527,6 @@ Error generating stack: `+i.message+`
 
   .cancel-button {
     background-color: #e4e6eb;
-    &:active {
-      background-color: #e4e6eb;
-    }
   }
 
   @media (max-width: 768px) {
