@@ -54,7 +54,7 @@ export const Login = () => {
         <>
           <div className="container-logo">
             <img
-              src={'blob/master/src/assets/petluxlogo.png'}
+              src={'src/assets/petluxlogo.png'}
               alt="logo-petlux"
               className="logo"
             />
