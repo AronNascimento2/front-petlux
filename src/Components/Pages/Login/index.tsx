@@ -4,12 +4,14 @@ import { useState, ChangeEvent, useCallback } from 'react'
 import { toast } from 'react-toastify'
 import { Users } from '../../../constants/Users'
 import { Loader } from '../../Loader'
+import { Visibility, VisibilityOff } from '@mui/icons-material'
 
 export const Login = () => {
   const history = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
+  const [showPassword, setShowPassword] = useState(false) // Track whether the password is shown
 
   const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value)
@@ -17,6 +19,9 @@ export const Login = () => {
 
   const handlePasswordChange = (event: ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value)
+  }
+  const handleTogglePassword = () => {
+    setShowPassword(!showPassword)
   }
 
   const handleLoginClick = useCallback(async () => {
@@ -62,14 +67,22 @@ export const Login = () => {
               value={email}
               onChange={handleEmailChange}
             />
-            <input
-              type="password"
-              placeholder="Senha"
-              className="input"
-              value={password}
-              onChange={handlePasswordChange}
-            />
+
+            <div className="password-input">
+              <input
+                type={showPassword ? 'text' : 'password'}
+                placeholder="Senha"
+                className="input"
+                value={password}
+                onChange={handlePasswordChange}
+              />
+
+              <div className="password-toggle" onClick={handleTogglePassword}>
+                {showPassword ? <VisibilityOff /> : <Visibility />}
+              </div>
+            </div>
           </div>
+
           <a
             className="lost-password"
             onClick={() => history('/recoverypassword')}>

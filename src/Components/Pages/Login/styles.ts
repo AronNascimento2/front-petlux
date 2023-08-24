@@ -7,6 +7,22 @@ export const Container = styled.div`
   justify-content: center;
   height: 100%;
 
+  .password-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Defina a largura total para o input-container */
+  }
+
+  .password-toggle {
+    color: black;
+    position: absolute;
+    top: 55%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
   .lost-password {
     cursor: pointer;
     &:hover {
@@ -88,8 +104,6 @@ export const Container = styled.div`
 
     .input,
     button {
-      width: 100%;
-      max-width: 400px;
     }
 
     .button-group {
