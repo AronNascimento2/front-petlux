@@ -1,27 +1,18 @@
-import { CreateNewAccount } from "../Components/Pages/CreateNewAccount";
-import { Home } from "../Components/Pages/Home";
-import { Login } from "../Components/Pages/Login";
-import { RecoveryPassword } from "../Components/Pages/RecoveryPassword";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ROUTES_PATH } from "./routesPath";
 
 
-
-export const AppRouter = () => {
+const AppRouter = () => {
+  const routes = ROUTES_PATH
   return (
-    <>
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<Header />}> */}
-          <Route index element={<Login />} />
-          <Route path="home" element={<Home />} />
-          <Route path="recoverypassword" element={<RecoveryPassword />} />
-          <Route path="createnewaccount" element={<CreateNewAccount />} />
-        {/* </Route> */}
+        {routes.map((route, index) => (
+          <Route key={index} path={route.path} element={route.element} />
+        ))}
       </Routes>
     </BrowserRouter>
- 
-    </>
-  )
-}
+  );
+};
 
-
+export default AppRouter;
