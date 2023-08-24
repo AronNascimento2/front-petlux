@@ -1,4 +1,12 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+const slideUpAnimation = keyframes`
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+`
 
 export const Container = styled.div`
   width: 80px;
@@ -32,6 +40,7 @@ export const ModalChat = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  animation: ${slideUpAnimation} 0.5s ease-in-out; /* Adicione a animação */
 
   .headerchat {
     display: flex;
