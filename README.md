@@ -8,6 +8,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React](https://reactjs.org)
 - [Vite](https://vitejs.dev/)
 - [Material UI](https://mui.com/)
+- [Styled-Components](https://styled-components.com/)
+- [React-toastify](https://fkhadra.github.io/react-toastify/introduction)
 
 _________
 
