@@ -10,10 +10,12 @@ export const InformationsBox = ({ description, date, hour }: InfoProps) => {
   return (
     <S.BackgroundOverlay>
       <S.StyledInformations>
-        <div className="container">
-          <p className="subtitle">{date}</p>
-          <p className="hour">{hour}</p>
-        </div>
+        {date && hour && (
+          <div className="container">
+            <p className="subtitle">{date}</p>
+            <p className="hour">{hour}</p>
+          </div>
+        )}
         <p className="description">{description}</p>
       </S.StyledInformations>
     </S.BackgroundOverlay>

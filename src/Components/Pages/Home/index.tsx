@@ -28,10 +28,12 @@ export const Home = () => {
         </S.StyledCard>
         <S.StyledCard>
           <div className="title">Carteirinha de vacinação</div>
+          <InformationsBox description="Sem informações" />
         </S.StyledCard>
         <S.StyledCard>
           {' '}
           <div className="title">Resultados de exames</div>
+          <InformationsBox description="Sem informações" />
         </S.StyledCard>
       </S.Wrapper>
 
