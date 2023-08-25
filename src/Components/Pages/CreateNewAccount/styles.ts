@@ -47,7 +47,9 @@ export const Container = styled.div`
       background-color: #ffd700;
     }
   }
-
+  .container-logo {
+    padding-bottom: 1rem;
+  }
   .cancel-button {
     background-color: #e4e6eb;
   }
