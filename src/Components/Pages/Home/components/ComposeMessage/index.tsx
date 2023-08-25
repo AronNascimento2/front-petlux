@@ -22,7 +22,7 @@ const ComposeMessage: React.FC<ComposeProps> = ({ messages, isUser }) => {
       {messages.map((message, index) => (
         <S.BubbleContainer key={index} isUser={isUser}>
           <S.Avatar
-            src="/front-petlux/assets/Aronn-081d529e.jpg"
+            src="/front-petlux/assets/Aronn1-ec7ee7e8.jpg"
             alt="Avatar"
           />
           <S.Bubble isUser={isUser}>

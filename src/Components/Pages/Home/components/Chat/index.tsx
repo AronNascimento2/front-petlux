@@ -48,7 +48,10 @@ export const Chat: React.FC<Props> = ({ className }: Props) => {
           <S.ModalChat onClick={handleModalClick}>
             <div className="headerchat">
               <div className="infochat">
-                <Avatar className="avatar" />
+                <Avatar
+                  className="avatar"
+                  src="/front-petlux/assets/Aronn1-ec7ee7e8.jpg"
+                />
                 <p>Aron Nascimento</p>
               </div>
               <div className="icon-close">

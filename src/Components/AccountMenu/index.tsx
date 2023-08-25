@@ -75,7 +75,7 @@ export default function AccountMenu() {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}>
             <Avatar
-              src="src/assets/Aronn1.jpg"
+              src="/front-petlux/assets/Aronn1-ec7ee7e8.jpg"
               sx={{ width: 50, height: 50 }}></Avatar>
           </IconButton>
         </Tooltip>
@@ -115,7 +115,7 @@ export default function AccountMenu() {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}>
         <MenuItem onClick={handleClose}>
-          <Avatar src="src/assets/Aronn.jpg" /> Ver Perfil
+          <Avatar src="/front-petlux/assets/Aronn1-ec7ee7e8.jpg" /> Ver Perfil
         </MenuItem>
 
         <Divider />
