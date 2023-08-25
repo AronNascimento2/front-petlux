@@ -1,8 +1,13 @@
 import * as S from './styles'
 import { Header } from '../../Header'
 import { Chat } from './components/Chat'
+import { InformationsBox } from './components/InformationsBox'
 
 export const Home = () => {
+  const info = [
+    { id: 1, title: 'Banho e Tosa', createdAt: '25/09/2023', hour: '14:30' },
+    { id: 2, title: 'Banho e Tosa', createdAt: '01/08/2023', hour: '10:30' }
+  ]
   return (
     <S.Container>
       <Header className="header" />
@@ -10,19 +15,23 @@ export const Home = () => {
         {' '}
         <S.StyledCard>
           <div className="title">Agendamentos</div>
-          <S.StyledInformations>
-            <div className="text">
-              <p>25/09/2023 12:00 </p>
-              <p>Banho e Tosa com TaxiDog</p>
-            </div>
-          </S.StyledInformations>
+          {info.map((i) => {
+            return (
+              <InformationsBox
+                key={i.id}
+                description={i.title}
+                hour={i.hour}
+                date={i.createdAt}
+              />
+            )
+          })}
         </S.StyledCard>
         <S.StyledCard>
-          <div>Carteirinha de vacinação</div>
+          <div className="title">Carteirinha de vacinação</div>
         </S.StyledCard>
         <S.StyledCard>
           {' '}
-          <div>Resultados de exames</div>
+          <div className="title">Resultados de exames</div>
         </S.StyledCard>
       </S.Wrapper>
 

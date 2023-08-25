@@ -35,8 +35,13 @@ export const StyledCard = styled(Card)`
   width: 400px;
   height: 200px;
   overflow: auto;
+  background-color: #192a56;
   .title {
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.8rem;
+    padding-left: 0.5rem;
+    font-weight: 600;
+    padding-left: 0%.5rem;
+    color: #ffffff;
   }
   @media (max-width: 767px) {
     width: 100%;
