@@ -11,10 +11,12 @@ import { Home } from './Components/Pages/Home'
 import { RecoveryPassword } from './Components/Pages/RecoveryPassword'
 import { CreateNewAccount } from './Components/Pages/CreateNewAccount'
 import { ShowerPet } from './Components/Pages/ShowerPet'
+import Scrollbars from './constants/GlobalStyles/scroolbars'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <Scrollbars />
       <Toasts />
       <BrowserRouter basename="/front-petlux">
         <Routes>

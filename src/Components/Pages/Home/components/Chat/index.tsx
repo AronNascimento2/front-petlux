@@ -1,16 +1,19 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import * as S from './styles'
 import MessageIcon from '@mui/icons-material/Message'
 import Avatar from '@mui/material/Avatar'
 import CloseIcon from '@mui/icons-material/Close'
-import { ComposeMessage } from '../ComposeMessage'
 import { Input } from '../../../../GlobalComponents'
+import ComposeMessage from '../ComposeMessage'
 
-type props = { className: string }
+type Props = {
+  className: string
+}
 
-// ...
-export const Chat = ({ className }: props) => {
+export const Chat: React.FC<Props> = ({ className }: Props) => {
   const [show, setShow] = useState(false)
+  const [message, setMessage] = useState('')
+  const [messages, setMessages] = useState<string[]>([])
 
   const handleOpenModal = () => {
     setShow(true)
@@ -20,9 +23,19 @@ export const Chat = ({ className }: props) => {
     setShow(false)
   }
 
-  const handleModalClick = (event: MouseEvent) => {
-    // Evitar a propagação do evento para o elemento pai
+  const handleModalClick = (event: React.MouseEvent) => {
     event.stopPropagation()
+  }
+
+  const handleMessageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setMessage(event.target.value)
+  }
+
+  const handleSendMessage = () => {
+    if (message.trim() !== '') {
+      setMessages((prevMessages) => [...prevMessages, message]) // Adiciona a nova mensagem ao histórico de mensagens
+      setMessage('') // Limpa o campo de entrada
+    }
   }
 
   return (
@@ -32,9 +45,8 @@ export const Chat = ({ className }: props) => {
       </S.Container>
       {show && (
         <S.ChatWrapper>
-          <S.ModalChat onClick={() => handleModalClick}>
+          <S.ModalChat onClick={handleModalClick}>
             <div className="headerchat">
-              {' '}
               <div className="infochat">
                 <Avatar className="avatar" />
                 <p>Aron Nascimento</p>
@@ -43,8 +55,12 @@ export const Chat = ({ className }: props) => {
                 <CloseIcon onClick={handleCloseModal} />
               </div>
             </div>
-            <ComposeMessage />
-            <Input />
+            <ComposeMessage isUser={false} messages={messages} />
+            <Input
+              onSend={handleSendMessage}
+              value={message}
+              onChange={handleMessageChange}
+            />
           </S.ModalChat>
         </S.ChatWrapper>
       )}
