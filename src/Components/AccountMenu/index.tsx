@@ -117,7 +117,7 @@ export default function AccountMenu() {
         </MenuItem>
 
         <Divider />
-        <TemporaryDrawer onClick={handleClose} />
+        <TemporaryDrawer />
         <MenuItem onClick={handleClose}>
           <ListItemIcon>
             <PetsIcon />
