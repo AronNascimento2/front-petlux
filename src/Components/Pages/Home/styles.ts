@@ -45,8 +45,6 @@ export const StyledCard = styled(Card)`
   }
 `
 export const Wrapper = styled.div`
-  /* No arquivo onde você estiver estilizando */
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -55,8 +53,6 @@ export const Wrapper = styled.div`
   padding-top: 2rem;
   gap: 0.5rem;
   margin: 1rem;
-  /* Defina o máximo de 3 cartões por linha em telas maiores */
-  /* Defina o máximo de 3 cartões por linha em telas maiores */
 `
 export const StyledInformations = styled(Card)`
   height: 40px;

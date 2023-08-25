@@ -10,10 +10,12 @@ import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import InboxIcon from '@mui/icons-material/MoveToInbox'
 import MedicationIcon from '@mui/icons-material/Medication'
+import { useNavigate } from 'react-router-dom'
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right'
 
 export default function TemporaryDrawer() {
+  const history = useNavigate()
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -51,7 +53,7 @@ export default function TemporaryDrawer() {
           'Medicamentos'
         ].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={() => history('/showerpet')}>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MedicationIcon />}
               </ListItemIcon>

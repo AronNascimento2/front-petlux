@@ -10,6 +10,7 @@ import { Login } from './Components/Pages/Login'
 import { Home } from './Components/Pages/Home'
 import { RecoveryPassword } from './Components/Pages/RecoveryPassword'
 import { CreateNewAccount } from './Components/Pages/CreateNewAccount'
+import { ShowerPet } from './Components/Pages/ShowerPet'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/recoverypassword" element={<RecoveryPassword />} />
           <Route path="/createnewaccount" element={<CreateNewAccount />} />
+          <Route path="/showerpet" element={<ShowerPet />} />
         </Routes>
       </BrowserRouter>{' '}
       <AppRouter />
