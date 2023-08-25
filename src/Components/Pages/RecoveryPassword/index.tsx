@@ -4,6 +4,7 @@ import { useCallback, useRef, useState } from 'react'
 import { toast } from 'react-toastify'
 import { Users } from '../../../constants/Users'
 import { Loader } from '../../GlobalComponents'
+import { ImageLoader } from '../../../helpers/ImageLoader'
 // ...
 
 export const RecoveryPassword = () => {
@@ -53,9 +54,10 @@ export const RecoveryPassword = () => {
       ) : (
         <>
           <div className="container-logo">
-            <img
-              src={'/front-petlux/assets/petluxlogo-135d622f.png'}
-              alt=""
+            <ImageLoader
+              src="/front-petlux/assets/petluxlogo-135d622f.png"
+              fallbackSrc="src/assets/petluxlogo.png"
+              alt="logo-petlux"
               className="logo"
             />
           </div>

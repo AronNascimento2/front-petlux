@@ -1,5 +1,6 @@
 import * as S from './styles'
 import AccountMenu from '../AccountMenu'
+import { ImageLoader } from '../../helpers/ImageLoader'
 
 type Props = {
   className?: string
@@ -8,12 +9,12 @@ type Props = {
 export const Header = ({ className }: Props) => {
   return (
     <S.Container className={className}>
-      <img
-        src={'/front-petlux/assets/petluxlogo-135d622f.png'}
+      <ImageLoader
+        src="/front-petlux/assets/petluxlogo-135d622f.png"
+        fallbackSrc="src/assets/petluxlogo.png"
         alt="logo-petlux"
         className="logo"
       />
-
       <AccountMenu />
     </S.Container>
   )

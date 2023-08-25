@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import * as S from './styles'
 import { useState, useCallback, ChangeEvent } from 'react'
 import { toast } from 'react-toastify'
+import { ImageLoader } from '../../../helpers/ImageLoader'
 
 export const CreateNewAccount = () => {
   const [name, setName] = useState('')
@@ -86,8 +87,9 @@ export const CreateNewAccount = () => {
   return (
     <S.Container>
       <div className="container-logo">
-        <img
-          src={'/front-petlux/assets/petluxlogo-135d622f.png'}
+        <ImageLoader
+          src="/front-petlux/assets/petluxlogo-135d622f.png"
+          fallbackSrc="src/assets/petluxlogo.png"
           alt="logo-petlux"
           className="logo"
         />

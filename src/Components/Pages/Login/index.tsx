@@ -5,12 +5,14 @@ import { toast } from 'react-toastify'
 import { Users } from '../../../constants/Users'
 import { Visibility, VisibilityOff } from '@mui/icons-material'
 import { Loader } from '../../GlobalComponents'
+import { ImageLoader } from '../../../helpers/ImageLoader'
 
 export const Login = () => {
   const history = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
+
   const [showPassword, setShowPassword] = useState(false) // Track whether the password is shown
 
   const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -53,8 +55,9 @@ export const Login = () => {
       ) : (
         <>
           <div className="container-logo">
-            <img
-              src={'/front-petlux/assets/petluxlogo-135d622f.png'}
+            <ImageLoader
+              src="/front-petlux/assets/petluxlogo-135d622f.png"
+              fallbackSrc="src/assets/petluxlogo.png"
               alt="logo-petlux"
               className="logo"
             />
