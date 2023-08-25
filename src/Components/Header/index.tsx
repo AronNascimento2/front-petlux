@@ -9,12 +9,15 @@ type Props = {
 export const Header = ({ className }: Props) => {
   return (
     <S.Container className={className}>
-      <ImageLoader
-        src="/front-petlux/assets/petluxlogo-135d622f.png"
-        fallbackSrc="src/assets/petluxlogo.png"
-        alt="logo-petlux"
-        className="logo"
-      />
+      <div className="container-logo">
+        <ImageLoader
+          src="/front-petlux/assets/petluxlogo-135d622f.png"
+          fallbackSrc="src/assets/petluxlogo.png"
+          alt="logo-petlux"
+          className="logo"
+        />
+      </div>
+
       <AccountMenu />
     </S.Container>
   )

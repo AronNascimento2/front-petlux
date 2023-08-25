@@ -7,7 +7,12 @@ export const Container = styled.div`
   height: 80px;
   align-items: center;
   justify-content: space-between;
+  .container-logo {
+    padding: 1rem;
+  }
+
   .logo {
-    width: 80px;
+    width: 60px;
+    border-radius: 50%;
   }
 `

@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
-import Button from '@mui/material/Button'
 import List from '@mui/material/List'
 import Divider from '@mui/material/Divider'
 import ListItem from '@mui/material/ListItem'
@@ -11,6 +10,8 @@ import ListItemText from '@mui/material/ListItemText'
 import InboxIcon from '@mui/icons-material/MoveToInbox'
 import MedicationIcon from '@mui/icons-material/Medication'
 import { useNavigate } from 'react-router-dom'
+import MenuItem from '@mui/material/MenuItem'
+import HandymanIcon from '@mui/icons-material/Handyman'
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right'
 
@@ -70,7 +71,12 @@ export default function TemporaryDrawer() {
     <div>
       {(['left'] as const).map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>Serviços</Button>
+          <MenuItem onClick={toggleDrawer(anchor, true)}>
+            <ListItemIcon>
+              <HandymanIcon />
+            </ListItemIcon>
+            Serviços
+          </MenuItem>
           <Drawer
             anchor={anchor}
             open={state[anchor]}
