@@ -3,12 +3,11 @@ import { styled } from 'styled-components'
 export const StyledInformations = styled.div`
   display: flex;
   @media (max-width: 767px) {
-    align-items: flex-end; /* Alinha os elementos ao final */
+    align-items: center; /* Alinha os elementos ao final */
   }
 
   .container {
     display: flex;
-    line-height: 1px;
     flex-direction: column;
     align-items: center;
     font-size: 14px;
@@ -18,7 +17,8 @@ export const StyledInformations = styled.div`
   }
   .description {
     color: #ffffff;
-
+    align-items: center; /* Alinha os elementos ao final */
+    display: flex;
     padding-left: 0.5rem;
   }
 `
