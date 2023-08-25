@@ -50,11 +50,19 @@ export const Container = styled.div`
   .container-logo {
     padding-bottom: 1rem;
   }
+
+  .logo {
+    width: 320px;
+    border-radius: 50%;
+  }
   .cancel-button {
     background-color: #e4e6eb;
   }
 
   @media (max-width: 768px) {
+    .logo {
+      width: 200px;
+    }
     .buttons-create {
       display: flex;
       width: 300px;
