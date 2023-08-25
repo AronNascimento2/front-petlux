@@ -1,5 +1,10 @@
 export const Users = [
   {
+    name: 'Usuario Teste',
+    email: 'usuario@teste.com',
+    senha: '#user123'
+  },
+  {
     name: 'Aron',
     email: 'aron@teste.com',
     senha: '@Ar12345678'
