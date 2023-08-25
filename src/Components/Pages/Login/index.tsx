@@ -25,12 +25,20 @@ export const Login = () => {
   const handleTogglePassword = () => {
     setShowPassword(!showPassword)
   }
-  const handlePage = useCallback(async () => {
+  const handleCreateACcountPage = useCallback(async () => {
     setLoading(true)
     await new Promise((resolve) => setTimeout(resolve, 2000))
     history('/createnewaccount')
     setLoading(false) // Ativa o loading
   }, [history])
+
+  const handleLostPasswordPage = useCallback(async () => {
+    setLoading(true)
+    await new Promise((resolve) => setTimeout(resolve, 2000))
+    history('/recoverypassword')
+    setLoading(false) // Ativa o loading
+  }, [history])
+
   const handleLoginClick = useCallback(async () => {
     setLoading(true) // Ativa o loading
 
@@ -91,16 +99,14 @@ export const Login = () => {
             </div>
           </div>
 
-          <a
-            className="lost-password"
-            onClick={() => history('/recoverypassword')}>
+          <a className="lost-password" onClick={handleLostPasswordPage}>
             Esqueceu a senha ?
           </a>
           <div className="button-group">
             <button onClick={handleLoginClick} disabled={loading}>
               Login
             </button>
-            <button className="create-button" onClick={handlePage}>
+            <button className="create-button" onClick={handleCreateACcountPage}>
               Criar nova conta
             </button>
           </div>
