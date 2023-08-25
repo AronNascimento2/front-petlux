@@ -684,12 +684,11 @@ Error generating stack: `+i.message+`
 `,FL=({messages:e,isUser:t})=>k.jsx(_L,{children:e.map((n,r)=>k.jsxs(AL,{isUser:t,children:[k.jsx(LL,{src:"/front-petlux/assets/petluxlogo-135d622f.png",alt:"Avatar"}),k.jsx(NL,{isUser:t,children:k.jsx("p",{children:n})})]},r))}),jL=({className:e})=>{const[t,n]=x.useState(!1),[r,o]=x.useState(""),[i,s]=x.useState([]),a=()=>{n(!0)},l=()=>{n(!1)},c=f=>{f.stopPropagation()},u=f=>{o(f.target.value)},d=()=>{r.trim()!==""&&(s(f=>[...f,r]),o(""))};return k.jsxs("div",{children:[k.jsx(SL,{onClick:a,className:e,children:k.jsx(zC,{color:"info",className:"icon"})}),t&&k.jsx(PL,{children:k.jsxs(kL,{onClick:c,children:[k.jsxs("div",{className:"headerchat",children:[k.jsxs("div",{className:"infochat",children:[k.jsx(Rp,{className:"avatar"}),k.jsx("p",{children:"Aron Nascimento"})]}),k.jsx("div",{className:"icon-close",children:k.jsx(BC,{onClick:l})})]}),k.jsx(FL,{isUser:!1,messages:i}),k.jsx(gD,{onSend:d,value:r,onChange:u})]})})]})},zL=ot.div`
   display: flex;
   @media (max-width: 767px) {
-    align-items: flex-end; /* Alinha os elementos ao final */
+    align-items: center; /* Alinha os elementos ao final */
   }
 
   .container {
     display: flex;
-    line-height: 1px;
     flex-direction: column;
     align-items: center;
     font-size: 14px;
@@ -699,7 +698,8 @@ Error generating stack: `+i.message+`
   }
   .description {
     color: #ffffff;
-
+    align-items: center; /* Alinha os elementos ao final */
+    display: flex;
     padding-left: 0.5rem;
   }
 `,BL=ot.div`
