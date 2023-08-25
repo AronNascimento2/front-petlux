@@ -1,5 +1,11 @@
 Experimente o PetLux !!!
 [clique aqui](https://aronnascimento2.github.io/front-petlux/)
+
+utilize as credenciais
+
+usuario@teste.com
+
+senha: #user123
  
  
  ![](https://github.com/AronNascimento2/front-petlux/blob/master/src/assets/petlux-video.gif)
