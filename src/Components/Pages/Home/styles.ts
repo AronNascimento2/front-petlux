@@ -9,6 +9,9 @@ export const Container = styled.div`
   left: 0px;
   width: 100vw;
   height: 100vh;
+  .header {
+    position: fixed;
+  }
 
   .content {
     position: relative; /* Garante que o espaço para o Chat seja reservado na altura */
@@ -34,15 +37,12 @@ export const Container = styled.div`
 export const StyledCard = styled(Card)`
   width: 80%;
   @media (min-width: 768px) {
-    padding: 0;
-
     width: 30%;
     height: 200px;
   }
   @media (max-width: 767px) {
-    padding: 0;
-    width: 80%;
-    height: 120px;
+    width: 100%;
+    height: 200px;
     margin-bottom: 20px;
   }
 `
@@ -56,7 +56,7 @@ export const Wrapper = styled.div`
   justify-content: center;
 
   gap: 0.5rem;
-  margin: 40px; /* Margem maior */
+  margin: 0.5rem;
   /* Defina o máximo de 3 cartões por linha em telas maiores */
   /* Defina o máximo de 3 cartões por linha em telas maiores */
 `

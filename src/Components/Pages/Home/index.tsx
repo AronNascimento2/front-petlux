@@ -5,7 +5,7 @@ import { Chat } from './components/Chat'
 export const Home = () => {
   return (
     <S.Container>
-      <Header />
+      <Header className="header" />
       <S.Wrapper>
         {' '}
         <S.StyledCard></S.StyledCard>
