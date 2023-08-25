@@ -9,7 +9,13 @@ export const Home = () => {
       <S.Wrapper>
         {' '}
         <S.StyledCard>
-          <div>Agendamentos</div>
+          <div className="title">Agendamentos</div>
+          <S.StyledInformations>
+            <div className="text">
+              <p>25/09/2023 12:00 </p>
+              <p>Banho e Tosa com TaxiDog</p>
+            </div>
+          </S.StyledInformations>
         </S.StyledCard>
         <S.StyledCard>
           <div>Carteirinha de vacinação</div>

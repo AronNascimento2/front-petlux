@@ -34,6 +34,10 @@ export const Container = styled.div`
 export const StyledCard = styled(Card)`
   width: 400px;
   height: 200px;
+  overflow: auto;
+  .title {
+    padding-bottom: 0.5rem;
+  }
   @media (max-width: 767px) {
     width: 100%;
     height: 200px;
@@ -53,4 +57,21 @@ export const Wrapper = styled.div`
   margin: 1rem;
   /* Defina o máximo de 3 cartões por linha em telas maiores */
   /* Defina o máximo de 3 cartões por linha em telas maiores */
+`
+export const StyledInformations = styled(Card)`
+  height: 40px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  opacity: 0.5;
+  background-color: gray; /* Cinza com transparência */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 767px) {
+    width: 270px;
+    margin-bottom: 20px;
+  }
 `
