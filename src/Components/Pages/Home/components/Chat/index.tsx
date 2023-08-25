@@ -50,9 +50,9 @@ export const Chat: React.FC<Props> = ({ className }: Props) => {
               <div className="infochat">
                 <Avatar
                   className="avatar"
-                  src="/front-petlux/assets/Aronn1-ec7ee7e8.jpg"
+                  src="/front-petlux/assets/petluxlogo-135d622f.png"
                 />
-                <p>Aron Nascimento</p>
+                <p>Atendente Petlux</p>
               </div>
               <div className="icon-close">
                 <CloseIcon onClick={handleCloseModal} />
