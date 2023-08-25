@@ -32,11 +32,8 @@ export const Container = styled.div`
   }
 `
 export const StyledCard = styled(Card)`
-  width: 80%;
-  @media (min-width: 768px) {
-    width: 30%;
-    height: 200px;
-  }
+  width: 400px;
+  height: 200px;
   @media (max-width: 767px) {
     width: 100%;
     height: 200px;
@@ -51,9 +48,9 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   justify-content: center;
-
+  padding-top: 2rem;
   gap: 0.5rem;
-  margin: 0.5rem;
+  margin: 1rem;
   /* Defina o máximo de 3 cartões por linha em telas maiores */
   /* Defina o máximo de 3 cartões por linha em telas maiores */
 `

@@ -8,12 +8,16 @@ export const Home = () => {
       <Header className="header" />
       <S.Wrapper>
         {' '}
-        <S.StyledCard></S.StyledCard>
-        <S.StyledCard></S.StyledCard>
-        <S.StyledCard></S.StyledCard>
-        <S.StyledCard></S.StyledCard>
-        <S.StyledCard></S.StyledCard>
-        <S.StyledCard></S.StyledCard>
+        <S.StyledCard>
+          <div>Agendamentos</div>
+        </S.StyledCard>
+        <S.StyledCard>
+          <div>Carteirinha de vacinação</div>
+        </S.StyledCard>
+        <S.StyledCard>
+          {' '}
+          <div>Resultados de exames</div>
+        </S.StyledCard>
       </S.Wrapper>
 
       <div className="content">
