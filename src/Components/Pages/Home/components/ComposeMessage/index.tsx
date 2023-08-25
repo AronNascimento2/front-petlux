@@ -11,7 +11,10 @@ const ComposeMessage: React.FC<ComposeProps> = ({ messages, isUser }) => {
     <S.Container>
       {messages.map((message, index) => (
         <S.BubbleContainer key={index} isUser={isUser}>
-          <S.Avatar src="src/assets/petluxlogo.png" alt="Avatar" />
+          <S.Avatar
+            src="/front-petlux/assets/petluxlogo-135d622f.png"
+            alt="Avatar"
+          />
           <S.Bubble isUser={isUser}>
             <p>{message}</p>
           </S.Bubble>
