@@ -74,7 +74,9 @@ export default function AccountMenu() {
             aria-controls={open ? 'account-menu' : undefined}
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}>
-            <Avatar sx={{ width: 50, height: 50 }}></Avatar>
+            <Avatar
+              src="src/assets/Aronn1.jpg"
+              sx={{ width: 50, height: 50 }}></Avatar>
           </IconButton>
         </Tooltip>
       </Box>
@@ -113,7 +115,7 @@ export default function AccountMenu() {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}>
         <MenuItem onClick={handleClose}>
-          <Avatar /> Ver Perfil
+          <Avatar src="src/assets/Aronn.jpg" /> Ver Perfil
         </MenuItem>
 
         <Divider />
