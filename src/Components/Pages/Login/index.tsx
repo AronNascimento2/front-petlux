@@ -25,7 +25,12 @@ export const Login = () => {
   const handleTogglePassword = () => {
     setShowPassword(!showPassword)
   }
-
+  const handlePage = useCallback(async () => {
+    setLoading(true)
+    await new Promise((resolve) => setTimeout(resolve, 2000))
+    history('/createnewaccount')
+    setLoading(false) // Ativa o loading
+  }, [history])
   const handleLoginClick = useCallback(async () => {
     setLoading(true) // Ativa o loading
 
@@ -95,9 +100,7 @@ export const Login = () => {
             <button onClick={handleLoginClick} disabled={loading}>
               Login
             </button>
-            <button
-              className="create-button"
-              onClick={() => history('/createnewaccount')}>
+            <button className="create-button" onClick={handlePage}>
               Criar nova conta
             </button>
           </div>
