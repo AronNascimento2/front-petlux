@@ -3,8 +3,8 @@ import * as S from './styles'
 import { useState, ChangeEvent, useCallback } from 'react'
 import { toast } from 'react-toastify'
 import { Users } from '../../../constants/Users'
-import { Loader } from '../../Loader'
 import { Visibility, VisibilityOff } from '@mui/icons-material'
+import { Loader } from '../../GlobalComponents'
 
 export const Login = () => {
   const history = useNavigate()

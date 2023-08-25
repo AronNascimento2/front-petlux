@@ -1,12 +1,80 @@
 :root {
   font-family: 'Lato', sans-serif;
-  margin: 0;
-
-  color: rgba(255, 255, 255, 0.87);
+  
   background-color: #192A56;
-  height: 100vh;
-  width: 100vw;
+  
   overflow: hidden;
+/* Reset de estilos para garantir consistência entre navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos globais do body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Estrutura do layout principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Navegação */
+.navbar {
+  background-color: #444;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Seção de conteúdo */
+.section {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}
 
 }
 

@@ -16,7 +16,7 @@ export const InputContainer = styled.div`
   }
 `
 
-export const Input = styled.input`
+export const InputText = styled.input`
   flex: 1;
   border: none;
   background-color: transparent;

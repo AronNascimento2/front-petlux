@@ -3,7 +3,7 @@ import * as S from './styles'
 import { useCallback, useRef, useState } from 'react'
 import { toast } from 'react-toastify'
 import { Users } from '../../../constants/Users'
-import { Loader } from '../../Loader'
+import { Loader } from '../../GlobalComponents'
 // ...
 
 export const RecoveryPassword = () => {

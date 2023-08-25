@@ -3,8 +3,8 @@ import * as S from './styles'
 import MessageIcon from '@mui/icons-material/Message'
 import Avatar from '@mui/material/Avatar'
 import CloseIcon from '@mui/icons-material/Close'
-import { Inputtext } from '../Input'
 import { ComposeMessage } from '../ComposeMessage'
+import { Input } from '../../../../GlobalComponents'
 
 type props = { className: string }
 
@@ -44,7 +44,7 @@ export const Chat = ({ className }: props) => {
               </div>
             </div>
             <ComposeMessage />
-            <Inputtext />
+            <Input />
           </S.ModalChat>
         </S.ChatWrapper>
       )}

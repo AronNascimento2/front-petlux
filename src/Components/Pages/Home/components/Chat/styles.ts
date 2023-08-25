@@ -26,6 +26,15 @@ export const Container = styled.div`
     height: 80px;
     width: 40px;
   }
+  @media (max-width: 767px) {
+    width: 60px;
+    height: 60px;
+    background: #ffff;
+    .icon {
+      height: 40px;
+      width: 40px;
+    }
+  }
 `
 
 export const ModalChat = styled.div`
