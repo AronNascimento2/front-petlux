@@ -4,7 +4,6 @@ export const StyledInformations = styled.div`
   display: flex;
   align-items: center;
   color: #ffffff;
-  min-height: 70px;
   background-color: rgba(200, 200, 200, 0.5); /* Cinza claro transparente */
   margin-bottom: 0.5rem;
   padding-left: 1rem;
@@ -23,8 +22,8 @@ export const StyledInformations = styled.div`
   .description {
     padding-left: 1rem;
   }
-  @media (max-width: 767px) {
-    align-items: center; /* Alinha os elementos ao final */
+  @media (max-width: 768px) {
+    height: 70px;
   }
 `
 export const BackgroundOverlay = styled.div`
