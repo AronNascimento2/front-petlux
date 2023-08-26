@@ -29,3 +29,18 @@ export const InputText = styled.input`
     color: #aaa;
   }
 `
+export const Container = styled.div`
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`

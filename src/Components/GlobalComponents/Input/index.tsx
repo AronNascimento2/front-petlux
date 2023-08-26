@@ -1,7 +1,6 @@
 import React, { ChangeEvent, KeyboardEvent } from 'react'
-import { InputContainer, InputText } from './styles'
 import SendIcon from '@mui/icons-material/Send'
-
+import * as S from './styles'
 interface InputProps {
   value: string
   onChange: (event: ChangeEvent<HTMLInputElement>) => void
@@ -17,16 +16,18 @@ const Input: React.FC<InputProps> = ({ value, onChange, onSend }) => {
   }
 
   return (
-    <InputContainer>
-      <InputText
+    <S.InputContainer>
+      <S.InputText
         type="text"
         placeholder="Digite sua mensagem..."
         value={value}
         onChange={onChange}
         onKeyPress={handleKeyPress}
       />
-      <SendIcon className="icon" onClick={onSend} />
-    </InputContainer>
+      <S.Container>
+        <SendIcon className="icon" onClick={onSend} />
+      </S.Container>
+    </S.InputContainer>
   )
 }
 

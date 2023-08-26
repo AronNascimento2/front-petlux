@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import * as S from './styles'
 import MessageIcon from '@mui/icons-material/Message'
 import Avatar from '@mui/material/Avatar'
@@ -15,13 +15,28 @@ export const Chat: React.FC<Props> = ({ className }: Props) => {
   const [message, setMessage] = useState('')
   const [messages, setMessages] = useState<string[]>([])
 
-  const handleOpenModal = () => {
-    setShow(true)
+  const handleModal = () => {
+    setShow(!show)
   }
+  useEffect(() => {
+    const handleDocumentClick = (event: any) => {
+      // Verificar se o clique ocorreu dentro do Dialog ou no botão de notificações.
+      if (
+        event.target.closest('.wrapper') === null &&
+        event.target.closest('.icon') === null
+      ) {
+        setShow(!show)
+      }
+    }
 
-  const handleCloseModal = () => {
-    setShow(false)
-  }
+    if (show) {
+      window.addEventListener('click', handleDocumentClick)
+    }
+
+    return () => {
+      window.removeEventListener('click', handleDocumentClick)
+    }
+  }, [show])
 
   const handleModalClick = (event: React.MouseEvent) => {
     event.stopPropagation()
@@ -40,11 +55,11 @@ export const Chat: React.FC<Props> = ({ className }: Props) => {
 
   return (
     <div>
-      <S.Container onClick={handleOpenModal} className={className}>
+      <S.Container onClick={handleModal} className={className}>
         <MessageIcon color="info" className="icon" />
       </S.Container>
       {show && (
-        <S.ChatWrapper>
+        <S.ChatWrapper className="wrapper">
           <S.ModalChat onClick={handleModalClick}>
             <div className="headerchat">
               <div className="infochat">
@@ -55,7 +70,7 @@ export const Chat: React.FC<Props> = ({ className }: Props) => {
                 <p>Atendente Petlux</p>
               </div>
               <div className="icon-close">
-                <CloseIcon onClick={handleCloseModal} />
+                <CloseIcon onClick={handleModal} />
               </div>
             </div>
             <ComposeMessage isUser={false} messages={messages} />

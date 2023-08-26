@@ -11,11 +11,9 @@ import Settings from '@mui/icons-material/Settings'
 import Logout from '@mui/icons-material/Logout'
 import { useNavigate } from 'react-router'
 import TemporaryDrawer from '../TemporaryDrawer'
-import NotificationsIcon from '@mui/icons-material/Notifications'
-import Badge from '@mui/material/Badge'
-import MailIcon from '@mui/icons-material/Mail'
 
 import { Box } from '@mui/material'
+import { Notifications } from '../Notifications'
 
 export default function AccountMenu() {
   const history = useNavigate()
@@ -50,22 +48,7 @@ export default function AccountMenu() {
           textAlign: 'center',
           paddingRight: '2rem'
         }}>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          {' '}
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit">
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-
+        <Notifications />
         <Tooltip title="Conta">
           <IconButton
             onClick={handleClick}
