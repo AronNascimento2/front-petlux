@@ -1,15 +1,17 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const slideDownAnimation = keyframes`
+from {
+  transform: translateY(-10%);
+  opacity: 0;
+}
+to {
+  transform: translateY(100);
+  opacity: 1;
+}
+`
 
 export const Dialog = styled.div`
-  @keyframes slideIn {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-
   width: 300px;
   height: 300px;
   border-radius: 30px;
@@ -18,6 +20,7 @@ export const Dialog = styled.div`
   top: 60px;
   right: 80px;
   color: black;
+  animation: ${slideDownAnimation} 0.5s ease-in-out; /* Adicione a animação */
   .container {
     display: flex;
     align-items: center;
@@ -40,6 +43,6 @@ export const Dialog = styled.div`
     top: 80px;
     bottom: 0;
     right: 0;
-    animation: slideIn 1s forwards;
+    animation: ${slideDownAnimation} 1s forwards;
   }
 `
