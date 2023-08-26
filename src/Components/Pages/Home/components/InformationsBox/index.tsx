@@ -8,16 +8,17 @@ type InfoProps = {
 
 export const InformationsBox = ({ description, date, hour }: InfoProps) => {
   return (
-    <S.BackgroundOverlay>
-      <S.StyledInformations>
-        {date && hour && (
+    <S.StyledInformations>
+      {date && hour && (
+        <>
           <div className="container">
-            <p className="subtitle">{date}</p>
-            <p className="hour">{hour}</p>
+            <div className="subtitle">{date}</div>
+            <div className="hour">{hour}</div>
           </div>
-        )}
-        <p className="description">{description}</p>
-      </S.StyledInformations>
-    </S.BackgroundOverlay>
+          <div className="line" />
+        </>
+      )}
+      <p className="description">{description}</p>
+    </S.StyledInformations>
   )
 }

@@ -59,20 +59,3 @@ export const Wrapper = styled.div`
   gap: 0.5rem;
   margin: 1rem;
 `
-export const StyledInformations = styled(Card)`
-  height: 40px;
-  width: 350px;
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-  opacity: 0.5;
-  background-color: gray; /* Cinza com transparência */
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  @media (max-width: 767px) {
-    width: 270px;
-    margin-bottom: 20px;
-  }
-`
