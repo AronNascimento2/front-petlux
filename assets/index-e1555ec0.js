@@ -493,6 +493,9 @@ Error generating stack: `+i.message+`
     width: 100%;
     height: 188px;
     padding-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 2rem;
+    }
   }
 `,CO=Ge.div`
   display: flex;
