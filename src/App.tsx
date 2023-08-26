@@ -1,4 +1,3 @@
-import './App.css'
 import { ToastContainer } from 'react-toastify'
 import Toasts from './constants/GlobalStyles/toasts'
 import { ThemeProvider } from 'styled-components'

@@ -23,14 +23,14 @@ export const StyledInformations = styled.div`
     padding-left: 1rem;
   }
   @media (max-width: 768px) {
-    height: 70px;
+    height: 50px;
   }
 `
 export const BackgroundOverlay = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     width: 270px;
   }
 `

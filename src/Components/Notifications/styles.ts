@@ -1,6 +1,15 @@
 import styled from 'styled-components'
 
 export const Dialog = styled.div`
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
   width: 300px;
   height: 300px;
   border-radius: 30px;
@@ -23,15 +32,14 @@ export const Dialog = styled.div`
     font-weight: 600;
   }
   @media (max-width: 768px) {
-    position: absolute;
-
     width: 100%;
     height: 100%;
     border-radius: 0;
     display: block;
     z-index: 5;
-    top: 71px;
+    top: 80px;
     bottom: 0;
     right: 0;
+    animation: slideIn 1s forwards;
   }
 `
