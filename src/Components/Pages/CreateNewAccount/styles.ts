@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  padding-top: 3rem;
 
   .container-inputs {
     display: flex;
@@ -52,7 +52,7 @@ export const Container = styled.div`
   }
 
   .logo {
-    width: 320px;
+    width: 250px;
     border-radius: 50%;
   }
   .cancel-button {

@@ -5,14 +5,14 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  padding-top: 3rem;
 
   .container-logo {
     padding-bottom: 1rem;
   }
 
   .logo {
-    width: 320px;
+    width: 250px;
     border-radius: 50%;
   }
 
@@ -22,16 +22,18 @@ export const Container = styled.div`
     width: auto;
     align-items: center;
   }
-
-  .input {
-    width: 490px;
+  .input,
+  button {
+    width: 300px;
     height: 45px;
     border-radius: 30px;
     border: none;
     padding: 0 1rem;
+    font-weight: 600;
+  }
+
+  .input {
     background: #cccccc;
-    max-width: 100%;
-    box-sizing: border-box;
   }
 
   a {
@@ -42,25 +44,18 @@ export const Container = styled.div`
   }
 
   .buttons-recovery {
+    gap: 0.5rem;
     display: flex;
-    padding: 1rem;
-    gap: 1rem;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5rem;
   }
 
   button {
-    height: 45px;
-    border-radius: 30px;
-    border: none;
-    padding: 0 1rem;
-    font-weight: 600;
-    color: #000000;
     background-color: #ffb300;
     cursor: pointer;
-
-    &:active {
-      background-color: #ffd700;
-    }
   }
 
   .cancel-button {
@@ -72,18 +67,13 @@ export const Container = styled.div`
       width: 200px;
     }
 
-    .input {
-      width: 240px;
-    }
-
     .buttons-recovery {
       gap: 0.5rem;
-    }
-
-    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
-      max-width: 300px;
-      height: 40px; /* Aumentei a altura do botão */
+      margin-top: 0.5rem;
     }
   }
 `

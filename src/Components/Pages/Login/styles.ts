@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
 
   .password-input {
     position: relative;
@@ -50,7 +50,7 @@ export const Container = styled.div`
   }
 
   .logo {
-    width: 320px;
+    width: 250px;
     border-radius: 50%;
   }
 
@@ -119,5 +119,15 @@ export const Container = styled.div`
       height: 50px;
       font-size: 14px;
     }
+  }
+`
+export const Wrapper = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 6rem;
+  @media (max-width: 768px) {
+    top: 3rem;
   }
 `

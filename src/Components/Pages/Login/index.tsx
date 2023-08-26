@@ -66,7 +66,7 @@ export const Login = () => {
       {loading ? (
         <Loader />
       ) : (
-        <>
+        <S.Wrapper>
           <div className="container-logo">
             <ImageLoader
               src="/front-petlux/assets/petluxlogo-135d622f.png"
@@ -110,7 +110,7 @@ export const Login = () => {
               Criar nova conta
             </button>
           </div>
-        </>
+        </S.Wrapper>
       )}
     </S.Container>
   )

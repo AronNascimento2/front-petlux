@@ -5,6 +5,7 @@ import { toast } from 'react-toastify'
 import { Users } from '../../../constants/Users'
 import { Loader } from '../../GlobalComponents'
 import { ImageLoader } from '../../../helpers/ImageLoader'
+import { Wrapper } from '../Login/styles'
 // ...
 
 export const RecoveryPassword = () => {
@@ -52,7 +53,7 @@ export const RecoveryPassword = () => {
       {loading ? (
         <Loader />
       ) : (
-        <>
+        <Wrapper>
           <div className="container-logo">
             <ImageLoader
               src="/front-petlux/assets/petluxlogo-135d622f.png"
@@ -70,12 +71,12 @@ export const RecoveryPassword = () => {
             />
           </div>
           <div className="buttons-recovery">
+            <button onClick={handleSetText}>Enviar</button>
             <button onClick={() => history('/')} className="cancel-button">
               Cancelar
             </button>
-            <button onClick={handleSetText}>Enviar</button>
           </div>
-        </>
+        </Wrapper>
       )}
     </S.Container>
   )
