@@ -1,12 +1,16 @@
 import React, { useRef, useEffect } from 'react'
 import * as S from './styles'
 
-interface ComposeProps {
-  messages: string[]
-  isUser: boolean
+type ComposeProps = {
+  messages: Message[]
+  isClient: boolean
 }
-
-const ComposeMessage: React.FC<ComposeProps> = ({ messages, isUser }) => {
+export type Message = {
+  id?: number
+  text: string
+  isClient: boolean
+}
+export const ComposeMessage: React.FC<ComposeProps> = ({ messages }) => {
   const messageContainerRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
@@ -19,19 +23,21 @@ const ComposeMessage: React.FC<ComposeProps> = ({ messages, isUser }) => {
 
   return (
     <S.Container ref={messageContainerRef}>
-      {messages.map((message, index) => (
-        <S.BubbleContainer key={index} isUser={isUser}>
+      {messages.map((message) => (
+        <S.BubbleContainer key={message.id} isClient={message.isClient}>
           <S.Avatar
-            src="/front-petlux/assets/Aronn1-ec7ee7e8.jpg"
+            src={
+              message.isClient
+                ? '/front-petlux/assets/Aronn1-ec7ee7e8.jpg'
+                : '/front-petlux/assets/petluxlogo-135d622f.png'
+            }
             alt="Avatar"
           />
-          <S.Bubble isUser={isUser}>
-            <p>{message}</p>
+          <S.Bubble isClient={message.isClient}>
+            <p>{message.text}</p>
           </S.Bubble>
         </S.BubbleContainer>
       ))}
     </S.Container>
   )
 }
-
-export default ComposeMessage

@@ -4,16 +4,26 @@ import MessageIcon from '@mui/icons-material/Message'
 import Avatar from '@mui/material/Avatar'
 import CloseIcon from '@mui/icons-material/Close'
 import { Input } from '../../../../GlobalComponents'
-import ComposeMessage from '../ComposeMessage'
+import { ComposeMessage } from '../ComposeMessage'
 
 type Props = {
   className: string
 }
+export interface Message {
+  text: string
+  isClient: boolean
+}
+const initialMessages: Message[] = [
+  {
+    text: 'Olá! Como posso ajudar?',
+    isClient: false
+  }
+]
 
 export const Chat: React.FC<Props> = ({ className }: Props) => {
   const [show, setShow] = useState(false)
   const [message, setMessage] = useState('')
-  const [messages, setMessages] = useState<string[]>([])
+  const [messages, setMessages] = useState<Message[]>(initialMessages)
 
   const handleModal = () => {
     setShow(!show)
@@ -48,8 +58,12 @@ export const Chat: React.FC<Props> = ({ className }: Props) => {
 
   const handleSendMessage = () => {
     if (message.trim() !== '') {
-      setMessages((prevMessages) => [...prevMessages, message]) // Adiciona a nova mensagem ao histórico de mensagens
-      setMessage('') // Limpa o campo de entrada
+      const newMessage: Message = {
+        text: message,
+        isClient: true // Define isso como true para simular mensagens do usuário
+      }
+      setMessages((prevMessages) => [...prevMessages, newMessage])
+      setMessage('')
     }
   }
 
@@ -73,7 +87,7 @@ export const Chat: React.FC<Props> = ({ className }: Props) => {
                 <CloseIcon onClick={handleModal} />
               </div>
             </div>
-            <ComposeMessage isUser={false} messages={messages} />
+            <ComposeMessage isClient={true} messages={messages} />
             <Input
               onSend={handleSendMessage}
               value={message}

@@ -6,15 +6,17 @@ export const Container = styled.div`
   overflow: auto;
 `
 
-export const BubbleContainer = styled.div<{ isUser: boolean }>`
+export const BubbleContainer = styled.div<{ isClient: boolean }>`
   display: flex;
-  flex-direction: ${({ isUser }) => (isUser ? 'row-reverse' : 'row')};
+  flex-direction: ${({ isClient }) => (!isClient ? 'row' : 'row-reverse')};
   align-items: flex-end;
 `
 
-export const Bubble = styled.div<{ isUser: boolean }>`
-  background-color: #d1d1d1; /* Defina a cor de fundo cinza mais claro aqui */
-  border-radius: 10px 10px 10px 0;
+export const Bubble = styled.div<{ isClient: boolean }>`
+  background-color: ${({ isClient }) => (!isClient ? '#d1d1d1' : 'green')};
+  border-radius: ${({ isClient }) =>
+    !isClient ? '30px 30px 30px 0;' : '30px 30px 0 30px'};
+  color: ${({ isClient }) => (!isClient ? 'black' : 'white')};
   padding: 10px;
   margin: 5px;
   min-width: 50px;

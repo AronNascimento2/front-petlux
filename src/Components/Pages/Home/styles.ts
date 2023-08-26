@@ -34,7 +34,6 @@ export const Container = styled.div`
 export const StyledCard = styled(Card)`
   width: 400px;
   height: 200px;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   justify-content: center;
@@ -53,6 +52,9 @@ export const StyledCard = styled(Card)`
     width: 100%;
     height: 188px;
     padding-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 2rem;
+    }
   }
 `
 export const Wrapper = styled.div`
