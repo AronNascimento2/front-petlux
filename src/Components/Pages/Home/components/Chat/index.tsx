@@ -22,7 +22,7 @@ const initialMessages: Message[] = [
 
 export const Chat: React.FC<Props> = ({ className }: Props) => {
   const [show, setShow] = useState(false)
-  const [message, setMessage] = useState('')
+  const [clientMessage, setClientMessage] = useState('')
   const [messages, setMessages] = useState<Message[]>(initialMessages)
 
   const handleModal = () => {
@@ -53,17 +53,17 @@ export const Chat: React.FC<Props> = ({ className }: Props) => {
   }
 
   const handleMessageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMessage(event.target.value)
+    setClientMessage(event.target.value)
   }
 
   const handleSendMessage = () => {
-    if (message.trim() !== '') {
+    if (clientMessage.trim() !== '') {
       const newMessage: Message = {
-        text: message,
+        text: clientMessage,
         isClient: true // Define isso como true para simular mensagens do usuário
       }
       setMessages((prevMessages) => [...prevMessages, newMessage])
-      setMessage('')
+      setClientMessage('')
     }
   }
 
@@ -90,7 +90,7 @@ export const Chat: React.FC<Props> = ({ className }: Props) => {
             <ComposeMessage isClient={true} messages={messages} />
             <Input
               onSend={handleSendMessage}
-              value={message}
+              value={clientMessage}
               onChange={handleMessageChange}
             />
           </S.ModalChat>
