@@ -796,7 +796,7 @@ to {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 3rem;
+  height: 100vh;
 
   .container-logo {
     padding-bottom: 1rem;
