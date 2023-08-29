@@ -13,12 +13,14 @@ export const BubbleContainer = styled.div<{ isClient: boolean }>`
 `
 
 export const Bubble = styled.div<{ isClient: boolean }>`
-  background-color: ${({ isClient }) => (!isClient ? '#d1d1d1' : 'green')};
+  background-color: ${({ isClient }) => (!isClient ? '#d1d1d1' : '#204F46')};
   border-radius: ${({ isClient }) =>
-    !isClient ? '30px 30px 30px 0;' : '30px 30px 0 30px'};
+    !isClient ? '18px 18px 18px 0;' : '18px 18px 0 18px'};
   color: ${({ isClient }) => (!isClient ? 'black' : 'white')};
   padding: 10px;
   margin: 5px;
+  display: flex;
+  justify-content: center;
   min-width: 50px;
   max-width: 70%;
   word-wrap: break-word;
