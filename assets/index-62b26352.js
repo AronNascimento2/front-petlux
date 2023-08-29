@@ -744,11 +744,13 @@ to {
   flex-direction: ${({isClient:e})=>e?"row-reverse":"row"};
   align-items: flex-end;
 `,yI=Re.div`
-  background-color: ${({isClient:e})=>e?"green":"#d1d1d1"};
-  border-radius: ${({isClient:e})=>e?"30px 30px 0 30px":"30px 30px 30px 0;"};
+  background-color: ${({isClient:e})=>e?"#204F46":"#d1d1d1"};
+  border-radius: ${({isClient:e})=>e?"18px 18px 0 18px":"18px 18px 18px 0;"};
   color: ${({isClient:e})=>e?"white":"black"};
   padding: 10px;
   margin: 5px;
+  display: flex;
+  justify-content: center;
   min-width: 50px;
   max-width: 70%;
   word-wrap: break-word;
